@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
+  const [input, setInput] = useState("");
   function handleChange(event) {
-    setInputValue(event.target.value);
+    setInput(event.target.value);
   }
 
   function handleClick(e) {
     e.preventDefault();
-    if (inputValue % 2 === 0) {
+    if (input % 2 === 0) {
       console.log("Even number");
-    } else if (inputValue % 2 !== 0) {
+    } else if (input % 2 !== 0) {
       console.log("odd");
     } else {
       console.log("string");
@@ -21,7 +21,7 @@ function App() {
     <div className="container">
       <form>
         <input
-          value={inputValue}
+          value={input}
           name="fName"
           placeholder="First Name"
           onChange={handleChange}
